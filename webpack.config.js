@@ -24,11 +24,11 @@ const config = {
     new HtmlWebpackPlugin({
       template: "index.html",
     }),
-    new CopyWebpackPlugin({
-      patterns: [
-        {from: 'assets'}
-      ]
-    }),
+    // new CopyWebpackPlugin({
+    //   patterns: [
+    //     {from: 'assets'}
+    //   ]
+    // }),
 
     // Add your plugins here
     // Learn more about plugins from https://webpack.js.org/configuration/plugins/
