@@ -29,6 +29,7 @@
     "chance": "^1.1.8",
     "copy-webpack-plugin": "^10.2.4",
     "dat.gui": "^0.7.9",
+    "node": "^17.7.0",
     "three": "^0.138.3"
   },
   "devDependencies": {
