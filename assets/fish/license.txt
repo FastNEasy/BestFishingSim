@@ -1,0 +1,11 @@
+Model Information:
+* title:	Fish
+* source:	https://sketchfab.com/3d-models/fish-9c591c2535f44bed88e32c82d83b61c5
+* author:	snot_nose (https://sketchfab.com/snot_nose)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Fish" (https://sketchfab.com/3d-models/fish-9c591c2535f44bed88e32c82d83b61c5) by snot_nose (https://sketchfab.com/snot_nose) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

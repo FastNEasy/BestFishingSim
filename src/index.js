@@ -325,7 +325,10 @@ export class main {
         for(let fish of this.fishArr){
             if(this.caughtFish.includes(fish)){
                 fish.translateZ( 0 );
-                this.scene.remove(fish);
+                this.fishArr.splice(this.fishArr.indexOf(fish), 1);
+                this.score += 1;
+                this.scoreElement.innerHTML = "Fish caught: " + this.score;
+                //this.scene.remove(fish);
             }else{
                 fish.translateZ( 0.05 );
                 if( fish.position.z >= 200 || fish.position.z <= -200 || fish.position.x >= 200 || fish.position.x <= -200){
@@ -371,8 +374,6 @@ export class main {
                     console.log("Fish: ", fishObj.name, " was touched by bait");
                     if(this.soundCaught.isPlaying == false){
                         this.soundCaught.play();
-                        this.score += 1;
-                        this.scoreElement.innerHTML = "Fish caught: " + this.score;
                         this.fishCaughtElement.hidden = false;
                         this.bait.position.y = 4;
                         this.bait.visible = false;
