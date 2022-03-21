@@ -40,6 +40,8 @@ export class main {
         this.scoreElement.innerHTML = "Fish caught: " + this.score;
         this.fishCaughtElement = document.getElementById('fishCaught');
         this.fishCaughtElement.innerHTML = "You caught a fish!";
+        this.frameWait = 5000;
+        this.framesUntilHide = Math.round(Math.random() * this.frameWait);
         //for collisions
         this.colFish;
         this.colBait;
@@ -322,6 +324,11 @@ export class main {
         for(let mixer of this.animationMixers){
             mixer.update( deltaSeconds );
         }
+        if(this.fishCaughtElement.hidden == false){
+            if(--this.framesUntilHide == 0){
+                this.fishCaughtElement.hidden = true;
+            }
+        }
         for(let fish of this.fishArr){
             if(this.caughtFish.includes(fish)){
                 fish.translateZ( 0 );
@@ -365,7 +372,6 @@ export class main {
             //this.camera.lookAt(this.boat.position);
         }
         for(let fishObj of this.fishArr){
-            
             if(this.bait){
                 this.colFish = new THREE.Box3().setFromObject(fishObj);
                 this.colBait = new THREE.Box3().setFromObject(this.bait);
@@ -381,7 +387,7 @@ export class main {
                     this.caughtFish.push(fishObj);
                     continue;
                 }
-                this.fishCaughtElement.hidden = true;
+                
             }
         }
     }
