@@ -62,11 +62,11 @@ export class main {
                     this.bait.position.y = 4;
                     this.bait.position.z = this.boat.position.z - 10;
                     this.travelDistance = this.bait.position.y - this.howDeep;
+                    this.fishCaughtElement.hidden = true;
                 }
             }
         }, 'add').name("Lower the hook!");
-        //TODO: add logic that if hook is cast, you cant drive for that moment
-        //TODO: check collisions between the hook and fishes
+        //TODO: add logic that if hook is cast, you cant drive for that moment (future)
         // Water
         const waterGeometry = new THREE.PlaneGeometry( 10000, 10000 );
     
@@ -323,11 +323,6 @@ export class main {
         const deltaSeconds = this.clock.getDelta();
         for(let mixer of this.animationMixers){
             mixer.update( deltaSeconds );
-        }
-        if(this.fishCaughtElement.hidden == false){
-            if(--this.framesUntilHide == 0){
-                this.fishCaughtElement.hidden = true;
-            }
         }
         for(let fish of this.fishArr){
             if(this.caughtFish.includes(fish)){
